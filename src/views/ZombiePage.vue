@@ -1,8 +1,8 @@
 <script>
-import TopBar from "@/components/zombie/TopBar.vue";
-import GrassGrid from "@/components/zombie/GrassGrid.vue";
-import { Plants } from "@/components/zombie/Plants";
-import { startGame } from "@/components/zombie/rule";
+import TopBar from "@/components/TopBar.vue";
+import GrassGrid from "@/components/GrassGrid.vue";
+import { Plants } from "@/rules/Plants/index.js";
+import { startGame } from "@/rules/rule";
 
 export default {
   name: "ZombiePage",
@@ -41,13 +41,12 @@ export default {
         this.titleOpen = false;
       }, 4000);
 
-      // 每隔三秒随机生成卡牌
       setInterval(() => {
         if (this.cards.length >= 10) return;
         const cards = Object.values(Plants);
         const card = cards[Math.floor(Math.random() * cards.length)];
         this.cards.push(card);
-      }, 5000);
+      }, 8000);
     },
   },
 };

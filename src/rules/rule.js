@@ -1,12 +1,3 @@
-// {
-//   type: 0,
-//   entity: Object
-//   position: {
-//     x: 0,
-//     y: 0
-//   },
-//   tag: Object
-// }
 import { Map } from "./Map";
 let entitys = [];
 
@@ -44,6 +35,7 @@ export function attackEntity(entity) {
 }
 
 export function startGame() {
+  configWindow();
   Map.create(entitys);
   setInterval(() => {
     entitys.forEach((entity) => {

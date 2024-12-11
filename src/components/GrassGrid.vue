@@ -1,5 +1,5 @@
 <script>
-import { addEntity, COL, ROW } from "@/components/zombie/rule";
+import { addEntity, COL, ROW } from "@/rules/rule";
 
 export default {
   name: "GrassGrid",
